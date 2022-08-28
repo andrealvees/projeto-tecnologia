@@ -65,6 +65,11 @@ header {
     font-style: italic;
 }
 
+.secção-texto {
+    opacity: 100;
+    overflow: hidden;
+}
+
 .artigo {
     position: relative;
     left: 50%;
@@ -109,30 +114,85 @@ header {
 }
 
 .footer {
+    display: flex;
+    justify-content: space-evenly;
     position: fixed;
     width: 100vw;
     height: 3rem;
     background-color: #252525;
     bottom: 0;
     margin-top: 3rem;
+    z-index: 9999;
 }
 
 .footer p {
-    position: absolute;
     color: #fff;
     font-style: italic;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    margin-top: 1.10rem;
+    margin-bottom: 1.10rem;
     font-size: 0.75rem;
 }
 
+.grupo {
+    width: 7rem;
+    font-size: 0.65rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0 0.2rem 0 0.2rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
 .ilustrativo {
-    position: absolute;
     width: 90vw;
     border-radius: 20px;
     box-shadow: -5px 5px 5px #ccc;
     border: 1px solid black;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.membros {
+    overflow: hidden;
+    text-align: center;
+    position: fixed;
+    opacity: 0;
+    background-color: #fff;
+    width: 25rem;
+    height: 25rem;
     left: 50%;
-    transform: translate(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    border-radius: 1rem;
+    font-family: sans-serif;
+    z-index: 9998;
+}
+
+.membros ul {
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
+    list-style: none;
+    top: 50%;
+    transform: translate(0,-60%);
+}
+
+.membros li {
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.fechar {
+    position: absolute;
+    margin-right: 2rem;
+    color: #000;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    font-size: 1.5rem;
+    right: 0;
 }
